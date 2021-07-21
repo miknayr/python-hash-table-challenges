@@ -29,14 +29,15 @@ the character d occurs 1 times
 '''
 
 def character_count(string):
-  hash = {}
+  ht={}
+
   for i in string:
-    if i not in hash:
-      hash[i] = 1
+    if i not in ht:
+      ht[i] = 1
     else: 
-      hash[i] = hash[i] + 1
-  for i in hash:
-    print(f'the character {i} occurs {hash[i]} times')
+      ht[i] = ht[i] + 1
+  for i in ht:
+    print(f'the character {i} occurs {ht[i]} times')
 
 # character_count('banana')
 character_count('hello world')

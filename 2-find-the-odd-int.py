@@ -24,27 +24,16 @@ Output: 10
 '''    
 
 def find_it(li):
-  hash = {}
+  ht = {}
   for i in li:
-    if i not in hash:
-      hash[i] = 1
+    if i not in ht:
+      ht[i] = 1
     else:
-      hash[i] += 1
-  for i in hash:
-    if hash[i] % 2 != 0: return i
+      ht[i] += 1
+  for i in ht:
+    if ht[i] % 2 != 0: return i
 
-# print(find_it([1,1,2]))
 
-# def find_it(li):
-#   hash = {}
-#   for number in li:
-#     if number not in hash: 
-#       hash[number] = 1 
-#     else:
-#       hash[number] += 1
- 
-#   for number in hash:
-#     if hash[number] % 2 != 0: return number
 
 print('it should return 5', find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
 print('it should return -1', find_it([1,1,2,-2,5,2,4,4,-1,-2,5]))
